@@ -13,20 +13,28 @@
 * a{
     text-decoration: none;
 }
+body{
+    background-color: salmon;
+}
 .hero{
-    background-image: url("/img/cat_dog_2.jpg");
-    background-size: 900px;
-    background-position: left bottom;
+    background-image: url("/img/cat_retro_photography-wallpaper-2560x1440.jpg");
+    background-size:cover;
+    background-position: center center;
     background-repeat: no-repeat;
     height: 500px;
 }
 h1{
     padding-top: 6rem;
+    padding-left: 10%;
     font-size: 3rem;
     font-style: italic;
     margin-bottom: 2rem;
-    text-align: right;
+    text-align: left;
     max-width: 75%;
+    color: white;
+    text-shadow: 0 0 5px salmon;
+    font-size: 5rem;
+    width: min-content;
 }
 nav{
     position: sticky;
@@ -35,14 +43,15 @@ nav{
     justify-content: center;
     align-items: center;
     background-color: gray;
-    box-shadow: 0px 5px 5px rgb(100, 100, 100);
+    box-shadow: 0px 5px 10px rgb(100, 100, 100);
 }
 nav > *{
     position: relative;
     align-items: center;
     padding-inline: 20px;
-    padding-top: 10px;
+    padding-top: 8px;
     height: 40px;
+    font-size: 1.5rem;
 }
 nav > *:hover{
     position: relative;
@@ -72,7 +81,8 @@ li{
     padding: 5px;
     font-size: 24px;
     border: 2px solid gray;
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 20px 0 20px 0;
     width: 40%;
     margin-left: auto;
     margin-right: auto;

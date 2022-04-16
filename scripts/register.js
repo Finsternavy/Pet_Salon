@@ -68,6 +68,14 @@ function displayPetsNames(){
         document.getElementById("pets").innerHTML += `
         <li>${petSalon.pets[i].name}</li>
         `
+        console.log(petSalon.pets[i].name);
     };
+
+    
 }
 displayPetsNames();
+
+onload = function numRegisteredPetsAlert(){
+    alert(`There are ${petSalon.pets.length} pets registered.`);
+}
+
