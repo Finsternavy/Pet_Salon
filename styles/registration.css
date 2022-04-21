@@ -22,6 +22,7 @@ body{
     background-position: center center;
     background-repeat: no-repeat;
     height: 500px;
+    box-shadow: inset 0 0 100px black;
 }
 h1{
     padding-top: 6rem;
@@ -30,9 +31,8 @@ h1{
     font-style: italic;
     margin-bottom: 2rem;
     text-align: left;
-    max-width: 75%;
     color: white;
-    text-shadow: 0 0 5px salmon;
+    text-shadow: 0 0 5px salmon, 5px 5px 5px black;
     font-size: 5rem;
     width: min-content;
 }
@@ -43,7 +43,7 @@ nav{
     justify-content: center;
     align-items: center;
     background-color: gray;
-    box-shadow: 0px 5px 10px rgb(100, 100, 100);
+    box-shadow: 0px 0px 20px black;
 }
 nav > *{
     position: relative;
@@ -76,20 +76,56 @@ h2{
     align-items: center;
     text-align: center;
 }
+#registerButton{
+    height: 40px;
+    width: 100px;
+}
 li{
     list-style: none;
     padding: 5px;
-    font-size: 24px;
-    border: 2px solid gray;
-    background-color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    border: 1px solid black;
+    color: white;
+    box-shadow: inset 0 0 25px black;
+    text-shadow: 3px 3px 3px black;
     border-radius: 20px 0 20px 0;
-    width: 40%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-block: 20px;
+    background-image: url("/img/fur.jpg");
+    background-position: center center;
+    letter-spacing: 3px;
+}
+#pets{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.pet-info{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: gray;
+    margin-inline: 20px;
+    width: 200px;
+}
+.pet-info-labels{
+    display: flex;
+    flex-direction: column;
+}
+.pet-info h4{
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+.pet-info-labels label{
+    text-align: left;
 }
 footer{
     padding-block: 20px;
     background-color: gray;
-    box-shadow: 0px -5px 5px rgb(100, 100, 100);
+    box-shadow: 0px -5px 15px rgb(50, 50, 50);
 }

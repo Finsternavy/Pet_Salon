@@ -22,8 +22,19 @@
         <a href="register.html">Register</a>
     </nav>
     <main>
+        <form >
+            <input type="text" id="pet-name" placeholder="Pets name">
+            <input type="number" id="pet-age" placeholder="Pets age">
+            <input type="text" id="gender" placeholder="Pets Gender">
+            <input type="text" id="pet-breed" placeholder="Pets Breed">
+            <input type="text" id="service" placeholder="Service requested">
+            <input type="text" id="owner-name" placeholder="Owners Name">
+            <input type="tel" id="contact-phone" placeholder="Owners phone number">
+        </form>
+        <button id="registerButton" onclick="register();">Register</button>
         <div id="pets">
             <h2>Registered Pets</h2>
+            
             <!--Display the names of the pets using <li> tag-->
         </div>
     </main>
@@ -33,6 +44,7 @@
         </div>
         <!--display salon details-->
     </footer>
+    <script src="scripts/display.js"></script>
     <script src="scripts/register.js"></script>
     <dialog onload="numRegisteredPetsAlert();"></dialog>
 </body>

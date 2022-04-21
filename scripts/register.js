@@ -1,7 +1,7 @@
 let petSalon =
     {salonName: "The Fashion Pet",
     address:{
-        street: "787 Ave University",
+        street: "787 University Ave",
         city: "Wichita",
         state: "KS",
         zip: "23456"
@@ -11,44 +11,7 @@ let petSalon =
         close: "8:00 p.m.",
         days: "Mon - Fri"
     },
-    pets:[
-        {
-            name: "Scooby",
-            age: 50,
-            breed: "Dane",
-            gender: "Male",
-            service: "Grooming",
-            ownsersName: "Shaggy",
-            contactNumber: "555-555-5555"
-        },
-        {
-            name: "Scrappy",
-            age: 40,
-            breed: "Mixed",
-            gender: "Male",
-            service: "Grooming",
-            ownsersName: "Shaggy",
-            contactNumber: "555-555-5555"
-        },
-        {
-            name: "Ruffles",
-            age: 8,
-            breed: "Golden Retriever",
-            gender: "Female",
-            service: "Training",
-            ownsersName: "Chris",
-            contactNumber: "555-555-5555"
-        },
-        {
-            name: "Deogi",
-            age: 100,
-            breed: "Dane",
-            gender: "Female",
-            service: "Training",
-            ownsersName: "Max",
-            contactNumber: "555-555-5555"
-        }
-    ]
+    pets:[]
 }
 
 console.log(petSalon);
@@ -75,7 +38,98 @@ function displayPetsNames(){
 }
 displayPetsNames();
 
-onload = function numRegisteredPetsAlert(){
-    alert(`There are ${petSalon.pets.length} pets registered.`);
+// need to make this to catch up
+class Pet {
+    constructor(name, age, gender, breed, service, ownerName, contactNum) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.breed = breed;
+        this.service = service;
+        this.ownerName = ownerName;
+        this.contactNum = contactNum;
+    }
 }
+
+
+// need to make this to catch up
+function register(){
+    let pet = new Pet(
+    document.getElementById("pet-name").value,
+    document.getElementById("pet-age").value,
+    document.getElementById("gender").value,
+    document.getElementById("pet-breed").value,
+    document.getElementById("service").value,
+    document.getElementById("owner-name").value,
+    document.getElementById("contact-phone").value
+    );
+
+    if(isValid(pet)){
+        petSalon.pets.push(pet);
+        console.log(petSalon.pets);
+        //displayPet();
+        displayCards();
+        clearInputs();
+        return;
+    }
+}
+
+let pet1 = new Pet("Sparkles", 4, "M","dog", "Wash", "Chris", "555-555-5555");
+let pet2 = new Pet("Lotto", 4, "F", "dog", "Wash", "Chris", "555-555-5555");
+let pet3 = new Pet("Pups", 4, "M", "dog", "Wash", "Chris", "555-555-5555");
+petSalon.pets.push(pet1, pet2, pet3);
+
+function isValid(aPet){
+    //return false when the pet is not valid
+    //return true if the pet is valid
+    let valid = true;
+    if(aPet.name.length == 0){
+        valid=false;
+        alert("Invalid name. Name cannot be empty!");
+    }
+    if(aPet.age.length == 0){
+        valid=false;
+        alert("Invalid age. Age cannot be empty!");
+    }
+    if(aPet.gender.length == 0){
+        valid=false;
+        alert("Invalid gender. Gender cannot be empty!");
+    }
+    if(aPet.breed.length == 0){
+        valid=false;
+        alert("Invalid breed. Breed cannot be empty!");
+    }
+    if(aPet.service.length == 0){
+        valid=false;
+        alert("Please select a service!");
+    }
+    if(aPet.ownerName.length == 0){
+        valid=false;
+        alert("Invalid owner name. Owner name cannot be empty!");
+    }
+    if(aPet.contactNum.length == 0){
+        valid=false;
+        alert("Invalid contact number. Please enter a contact number!");
+    }
+
+    return valid;// true or fasle
+}
+
+//displayPet();
+// need to make this to catch  up
+function clearInputs(){
+    document.getElementById("pet-name").value = "";
+    document.getElementById("pet-age").value = "";
+    document.getElementById("gender").value = "";
+    document.getElementById("pet-breed").value = "";
+    document.getElementById("service").value = "";
+    document.getElementById("owner-name").value = "";
+    document.getElementById("contact-phone").value = "";
+}
+
+displayCards();
+
+onload = function numRegisteredPetsAlert(){
+    //alert(`There are ${petSalon.pets.length} pets registered.`);
+};
 
