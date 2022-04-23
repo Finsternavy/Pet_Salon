@@ -68,7 +68,8 @@ function register(){
         petSalon.pets.push(pet);
         console.log(petSalon.pets);
         //displayPet();
-        displayCards();
+        //displayCards();
+        displayTable();
         clearInputs();
         return;
     }
@@ -128,6 +129,7 @@ function clearInputs(){
 }
 
 displayCards();
+displayTable();
 
 onload = function numRegisteredPetsAlert(){
     //alert(`There are ${petSalon.pets.length} pets registered.`);

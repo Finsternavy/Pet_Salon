@@ -68,19 +68,37 @@ nav > *:hover{
 
 /*------  Main  ---------*/
 h2{
-    padding-block: 8rem;
     font-size: 40px;
 }
 #pets{
-    margin-bottom: 50rem;
     align-items: center;
     text-align: center;
+}
+.registration-banner{
+    margin-top: 40px;
+    color: white;
+    text-shadow: 0 0 5px black;
+    font-size: 3rem;
+}
+#registration-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 25px;
+}
+#registration-form input{
+    width: 400px;
+    margin-block: 5px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 0 10px gray;
 }
 #registerButton{
     height: 40px;
     width: 100px;
 }
-li{
+/* li{
     list-style: none;
     padding: 5px;
     font-size: 2rem;
@@ -97,7 +115,7 @@ li{
     background-image: url("/img/fur.jpg");
     background-position: center center;
     letter-spacing: 3px;
-}
+} */
 #pets{
     display: flex;
     justify-content: center;
@@ -123,6 +141,30 @@ li{
 }
 .pet-info-labels label{
     text-align: left;
+}
+
+.register-table{
+    border: 1px solid black;
+    background-color: rgb(100, 100, 100);
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-block: 50px;
+}
+.register-table th,
+.register-table td {
+    border: 1px solid black;
+    height: 50px;
+    width: 100px;
+}
+.register-table th{
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+.register-table td{
+    color: rgb(233, 233, 233);
+    background-color: rgb(100, 100, 100);
+    
 }
 footer{
     padding-block: 20px;
