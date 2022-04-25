@@ -1,0 +1,137 @@
+:root{
+
+}
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: black;
+}
+* a{
+    text-decoration: none;
+}
+body{
+    background-color: salmon;
+}
+.hero{
+    background-image: url("/img/cat_dog_header.png");
+    background-size:cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+h1{
+    padding-top: 6rem;
+    padding-left: 10%;
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: salmon;
+    text-shadow: 0 0 5px salmon, 5px 5px 5px black;
+    font-size: 5rem;
+    width: min-content;
+}
+nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    box-shadow: 0px 5px 10px rgb(50, 50, 50);
+    z-index: 5;
+}
+nav > *{
+    position: relative;
+    padding-inline: 20px;
+    padding-top: 8px;
+    height: 40px;
+    font-size: 1.5rem;
+    color: black;
+}
+nav > *:hover{
+    position: relative;
+    color: white;
+    background-color: lightgray;
+    background-image: url("/img/paw.png");
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: -1;
+}
+.home{
+    background-color: salmon;
+}
+/*-------main-------*/
+.service-card-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    width: fit-content;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px;
+    overflow: hidden;
+    z-index: 0;
+}
+.service-card-img{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.service-card-img img{
+    position: relative;
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    position: center;
+    border: inset 2px  white;
+}
+.service-card-text{
+    padding-inline: 20px;
+    font-size: 2rem;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.service-card-text h3{
+    font-weight: 900;
+    color: white;
+    text-align: left;
+    height: 40%;
+}
+.service-card-text p{
+    height: 40%;
+}
+.service-card-text a{
+    height: 100%;
+}
+.schedule-now{
+    color: salmon;
+    background-color: white;
+    width: 100%;
+}
+/*-------footer--------*/
+footer{
+    padding-block: 20px;
+    background-color: gray;
+    box-shadow: 0px -5px 15px rgb(50, 50, 50);
+}
+
+@media (min-width: 678px){
+    .service-card-container{
+        flex-direction: row;
+    }
+}

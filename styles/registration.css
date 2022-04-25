@@ -65,7 +65,9 @@ nav > *:hover{
     background-color: rgba(0, 0, 0, .3);
     z-index: -1;
 }
-
+.register{
+    background-color: salmon;
+}
 /*------  Main  ---------*/
 h2{
     font-size: 40px;
@@ -86,8 +88,9 @@ h2{
     align-items: center;
     margin-block: 25px;
 }
-#registration-form input{
-    width: 400px;
+#registration-form input,
+#registration-form select{
+    min-width: 450px;
     margin-block: 5px;
     height: 40px;
     border-radius: 10px;
@@ -98,28 +101,32 @@ h2{
     height: 40px;
     width: 100px;
 }
-/* li{
-    list-style: none;
-    padding: 5px;
-    font-size: 2rem;
-    font-weight: 900;
-    border: 1px solid black;
-    color: white;
-    box-shadow: inset 0 0 25px black;
-    text-shadow: 3px 3px 3px black;
-    border-radius: 20px 0 20px 0;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-block: 20px;
-    background-image: url("/img/fur.jpg");
-    background-position: center center;
-    letter-spacing: 3px;
-} */
+#registerButton:hover{
+    background-color: greenyellow;
+}
 #pets{
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+}
+.pet-name-header{
+    display: flex;
+    justify-content: space-between;
+}
+.delete-button{
+    background-color: transparent;
+    border: none;
+    width: 40px;
+}
+.delete-button:hover{
+    background-color: white;
+}
+.delete-button:active i{
+    background-color: red;
+}
+.fa-delete-left{
+    transform: scale(1.5);
+
 }
 .pet-info{
     display: flex;
@@ -142,18 +149,35 @@ h2{
 .pet-info-labels label{
     text-align: left;
 }
-
+#search-container{
+    margin-top: 40px;
+}
+.search-box{
+    min-width: 450px;
+    margin-block: 5px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 0 10px gray;
+}
+.search-button{
+    height: 40px;
+    min-width: 200px;
+    margin-left: 10px;
+}
+.search-button:hover{
+    background-color: greenyellow;
+}
 .register-table{
     border: 1px solid black;
     background-color: rgb(100, 100, 100);
-    background-color: red;
+    background-color: black;
     margin-left: auto;
     margin-right: auto;
-    margin-block: 50px;
+    margin-bottom: 50px;
 }
 .register-table th,
 .register-table td {
-    border: 1px solid black;
     height: 50px;
     width: 100px;
 }
@@ -165,6 +189,9 @@ h2{
     color: rgb(233, 233, 233);
     background-color: rgb(100, 100, 100);
     
+}
+.highlight{
+    border: 3px solid red;
 }
 footer{
     padding-block: 20px;
