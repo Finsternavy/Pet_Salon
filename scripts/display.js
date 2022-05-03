@@ -38,6 +38,7 @@ function displayCards(){
 
 function displayTable(){
     let tableData = `
+        <th>ID</th>
         <th>Name</th>
         <th>Age</th>
         <th>Gender</th>
@@ -52,6 +53,7 @@ function displayTable(){
         let pet = petSalon.pets[i];
         tableData +=`
             <tr id="${pet.id}">
+                <td>${pet.id}</td>
                 <td>${pet.name}</td>
                 <td>${pet.age}</td>
                 <td>${pet.gender}</td>
@@ -60,6 +62,7 @@ function displayTable(){
                 <td>${pet.ownerName}</td>
                 <td>${pet.contactNum}</td>
                 <td>${pet.rewards}</td>
+                <td><h4></h4><button onclick="deletePet(${pet.id});" class="delete-button"><i class="fa-solid fa-delete-left"></i></button></td>
             </tr>
         `;
     }

@@ -156,6 +156,7 @@ function deletePet(petId){
         }
         document.getElementById(petId).remove();
         displayCards();
+        displayTable();
 }
 
 function searchPet(){
@@ -175,7 +176,8 @@ function searchPet(){
             search === pet.breed.toUpperCase() ||
             search === pet.service.toUpperCase() ||
             search === pet.ownerName.toUpperCase() ||
-            search === pet.contactNum.toUpperCase()){
+            search === pet.contactNum.toUpperCase() ||
+            search === pet.rewards.toUpperCase()){
                 console.log("Found it");
                 document.getElementById(pet.id).classList.add("highlight");
                 // get all td's in the table
