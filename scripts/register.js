@@ -71,7 +71,7 @@ function register(){
         petSalon.pets.push(pet);
         console.log(petSalon.pets);
         //displayPet();
-        displayCards();
+        // displayCards();
         displayTable();
         clearInputs();
         return;
@@ -155,7 +155,7 @@ function deletePet(petId){
             }
         }
         document.getElementById(petId).remove();
-        displayCards();
+        // displayCards();
         displayTable();
 }
 
@@ -170,7 +170,8 @@ function searchPet(){
     for(let i = 0; i < petSalon.pets.length; i++){
         let pet = petSalon.pets[i];
         
-        if(search === pet.name.toUpperCase() ||
+        if(search == pet.id ||
+            search === pet.name.toUpperCase() ||
             search == pet.age ||
             search === pet.gender.toUpperCase() ||
             search === pet.breed.toUpperCase() ||
@@ -206,7 +207,7 @@ function searchPet(){
     }
 }
 
-displayCards();
+// displayCards();
 displayTable();
 
 onload = function numRegisteredPetsAlert(){

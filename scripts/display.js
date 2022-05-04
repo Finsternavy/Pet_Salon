@@ -47,6 +47,7 @@ function displayTable(){
         <th>Owner</th>
         <th>Phone</th>
         <th>Rewards?</th>
+        <th>Delete</th>
     `;
 
     for(let i = 0; i<petSalon.pets.length; i++){
