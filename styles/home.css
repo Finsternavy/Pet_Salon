@@ -1,5 +1,6 @@
 :root{
-
+--bg-element-primary: rgb(48, 138, 255);
+--bg-element-secondary: rgb(97, 166, 255);
 }
 *,
 *::after,
@@ -16,42 +17,48 @@
 body{
     background-color: white;
 }
-.hero{
-    background-image: url("/img/pet_massage.jpg");
-    background-size:cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    height: 500px;
-}
-h1{
-    padding-top: 6rem;
-    padding-left: 10%;
-    font-size: 3rem;
-    font-style: italic;
-    margin-bottom: 2rem;
-    text-align: left;
-    color: salmon;
-    text-shadow: 0 0 5px salmon, 5px 5px 5px black;
-    font-size: 5rem;
-    width: min-content;
-}
-nav{
+header{
     position: sticky;
     top: 0;
+}
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+    background-color: var(--bg-element-primary);
+}
+.menu-container > *{
+    flex: 1;
+}
+h1{
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 2rem;
+    text-align: left;
+    color: white;
+}
+nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: gray;
-    box-shadow: 0px 5px 10px rgb(50, 50, 50);
     z-index: 5;
+    min-width: content;
 }
 nav > *{
     position: relative;
-    padding-inline: 20px;
-    padding-top: 8px;
-    height: 40px;
+    padding: 10px;
+    margin-right: 5px;
     font-size: 1.5rem;
     color: black;
+    font-size: 1rem;
 }
 nav > *:hover{
     position: relative;
@@ -63,10 +70,12 @@ nav > *:hover{
     background-repeat: no-repeat;
     background-size: 30px;
     background-color: rgba(0, 0, 0, .3);
+    border-radius: 10px;
     z-index: -1;
 }
 .home{
-    background-color: salmon;
+    background-color: var(--bg-element-secondary);
+    border-radius: 10px;
 }
 /*-------main-------*/
 .discount-container{
@@ -86,12 +95,22 @@ nav > *:hover{
 /*-------footer--------*/
 footer{
     padding-block: 20px;
-    background-color: gray;
-    box-shadow: 0px -5px 15px rgb(50, 50, 50);
+    background-color: var(--bg-element-primary);
+    border: 1px solid black;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-@media (min-width: 678px){
+@media (min-width: 705px){
     .service-card-container{
         flex-direction: row;
+    }
+
+    .menu-container{
+        flex-direction: row;
+        padding-bottom: 0;
     }
 }

@@ -154,18 +154,13 @@ function deletePet(petId){
                 petSalon.pets.splice(deleteIndex, 1);
             }
         }
-        document.getElementById(petId).remove();
-        // displayCards();
+        $("#" + petId).remove();
         displayTable();
 }
 
 function searchPet(){
-    
-    let search = document.getElementById("search-box").value;
-    document.getElementById("search-box").value="";
-    search = search.toUpperCase();
-
-    console.log("Searching: " + search);
+    let searchBox = $("#search-box");
+    search = searchBox.val().toUpperCase();
 
     for(let i = 0; i < petSalon.pets.length; i++){
         let pet = petSalon.pets[i];
@@ -180,13 +175,14 @@ function searchPet(){
             search === pet.contactNum.toUpperCase() ||
             search === pet.rewards.toUpperCase()){
                 console.log("Found it");
-                document.getElementById(pet.id).classList.add("highlight");
+                $("#" + pet.id).addClass("highlight");
+                // document.getElementById(pet.id).classList.add("highlight");
                 // get all td's in the table
-                let tds = document.querySelectorAll("#register-table td");
+                let tds = $("#register-table td");
+                // let tds = document.querySelectorAll("#register-table td");
                 // search for the desired text in each td inner html
                 for(let i = 0; i < tds.length; i++){
                     if(tds[i].innerHTML.toUpperCase() == search){
-                        console.log(tds[i].innerHTML);
                         // add the highlight class to that td
                          tds[i].classList.add("highlight");
                     }else{
@@ -205,6 +201,7 @@ function searchPet(){
                 }
         }
     }
+    searchBox.val("");
 }
 
 // displayCards();

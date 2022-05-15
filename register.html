@@ -10,58 +10,67 @@
 </head>
 <body>
     <header>
-        <div class="hero">
-            <h1>The Fashion Pet</h1>
+        <div class="hero-container">
+
+            <div class="name-container">
+                <h1>The Fashion Pet</h1>
+            </div>
+            
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a class="register" href="register.html">Register</a>
+            </nav>
         </div>
-        
-    </header>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a class="register" href="register.html">Register</a>
-    </nav>
+        </header>
     <main>
-        <h2 class="registration-banner">Register your Pet!</h2>
-        <form id="registration-form">
-            <input type="text" id="pet-name" placeholder="Pets name">
-            <input type="number" id="pet-age" placeholder="Pets age">
-            <select name="gender" id="gender">
-                <option value="">--Please select your pets gender--</option>
-                <option value="M">M</option>
-                <option value="F">F</option>
-            </select>
-            <input type="text" id="pet-breed" placeholder="Pets Breed">
-            <select name="service" id="service">
-                <option value="">--Please select a service--</option>
-                <option value="wash">Wash</option>
-                <option value="pedicure">Pedicure</option>
-                <option value="hair-cut">Hair cut</option>
-                <option value="massage">Massage</option>
-                <option value="breeding">Breeding</option>
-            </select>
-            <input type="text" id="owner-name" placeholder="Owners Name">
-            <input type="tel" id="contact-phone" placeholder="Owners phone number">
-            <select name="rewards" id="rewards">
-                <option value="">--Register for rewards?--</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-        </form>
-        <button id="registerButton" onclick="register();">Register</button>
+        <div class="registration-container">
+            <h2 class="registration-banner">Register your Pet!</h2>
+            <form id="registration-form">
+                <input type="text" id="pet-name" placeholder="Pets name">
+                <input type="number" id="pet-age" placeholder="Pets age">
+                <select name="gender" id="gender">
+                    <option value="">--Please select your pets gender--</option>
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+                <input type="text" id="pet-breed" placeholder="Pets Breed">
+                <select name="service" id="service">
+                    <option value="">--Please select a service--</option>
+                    <option value="wash">Wash</option>
+                    <option value="pedicure">Pedicure</option>
+                    <option value="hair-cut">Hair cut</option>
+                    <option value="massage">Massage</option>
+                    <option value="breeding">Breeding</option>
+                </select>
+                <input type="text" id="owner-name" placeholder="Owners Name">
+                <input type="tel" id="contact-phone" placeholder="Owners phone number">
+                <select name="rewards" id="rewards">
+                    <option value="">--Register for rewards?--</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </form>
+            <button id="registerButton" onclick="register();">Register</button>
+        </div>
         <div id="pets">
             <h2>Registered Pets</h2>
             <a href=""></a>
             <!--Display the names of the pets using <li> tag-->
         </div>
 
-        <div id="search-container">
-            <input type="search" id="search-box" class="search-box" placeholder="Search">
-            <button class="search-button" onclick="searchPet();">Search</button>
-        </div>
-        <table id="register-table" class="register-table table-dark">
+        <div class="search-table-container">
+            <div id="search-container">
+                <input type="search" id="search-box" class="search-box" placeholder="Search">
+                <button class="search-button" onclick="searchPet();"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="table-div">
+                <table id="register-table" class="register-table table-dark">
 
-        </table>
+                </table>
+            </div>
+        </div>
     </main>
     <footer>
         <div id="salon-info">
@@ -69,6 +78,7 @@
         </div>
         <!--display salon details-->
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="scripts/display.js"></script>
     <script src="scripts/register.js"></script>
 </body>

@@ -49,10 +49,12 @@ function displayTable(){
         <th>Rewards?</th>
         <th>Delete</th>
     `;
-
+    let table = $("#register-table");
+    table.html("");
+    table.append(tableData);
     for(let i = 0; i<petSalon.pets.length; i++){
         let pet = petSalon.pets[i];
-        tableData +=`
+        let row =`
             <tr id="${pet.id}">
                 <td>${pet.id}</td>
                 <td>${pet.name}</td>
@@ -63,11 +65,11 @@ function displayTable(){
                 <td>${pet.ownerName}</td>
                 <td>${pet.contactNum}</td>
                 <td>${pet.rewards}</td>
-                <td><h4></h4><button onclick="deletePet(${pet.id});" class="delete-button"><i class="fa-solid fa-delete-left"></i></button></td>
+                <td><button onclick="deletePet(${pet.id});" class="delete-button"><i class="fa-solid fa-delete-left"></i></button></td>
             </tr>
         `;
+        table.append(row);
     }
-    document.getElementById("register-table").innerHTML = tableData;
 }
 
 
