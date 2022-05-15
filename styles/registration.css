@@ -183,9 +183,9 @@ nav > *:hover{
     margin-left: auto;
     margin-right: auto;
     padding-inline: 40px;
-    padding-bottom: 3px;
     background-color: var(--bg-element-primary);
     border-radius: 20px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
 }
 .table-div{
@@ -193,9 +193,7 @@ nav > *:hover{
 }
 .register-table{
     border: 1px solid black;
-    background-color: rgb(100, 100, 100);
     background-color: black;
-    margin-bottom: 50px;
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
